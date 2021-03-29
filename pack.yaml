@@ -1,0 +1,11 @@
+---
+ref: my_echo_action
+name : my_echo_action
+description : Echo message
+keywords:
+  - python3
+version: 0.0.1
+python_versions:
+  - "3"
+author : MCirillo
+email : matias.cirillo@la.logicalis.com
