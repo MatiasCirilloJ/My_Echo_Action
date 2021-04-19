@@ -5,6 +5,7 @@ try:
     import hashlib
 except:
     os.system("pip3 install hashlib")
+    time.sleep(15)
     import hashlib
 import filecmp
 
