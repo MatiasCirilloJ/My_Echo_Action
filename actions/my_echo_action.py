@@ -1,6 +1,11 @@
 import sys
 import time
-import hashlib
+import os
+try:
+    import hashlib
+except:
+    os.system("pip3 install hashlib")
+    import hashlib
 import filecmp
 
 from st2common.runners.base_action import Action
