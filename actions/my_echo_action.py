@@ -15,9 +15,17 @@ class MyEchoAction(Action):
     def run(self, message):
         
         with open("/opt/stackstorm/packs/my_echo_action/actions/logs.txt", "rb") as f:
-            print(hashlib.md5(f.read()).hexdigest())
+            h1 = hashlib.md5(f.read()).hexdigest()
+        with open("/opt/stackstorm/packs/my_echo_action/actions/logs.txt", "rb") as f:
+            h2 = hashlib.md5(f.read()).hexdigest()
         with open("/opt/stackstorm/packs/my_echo_action/actions/logs.txt", "a") as f:
             f.write(message + "\n")
         with open("/opt/stackstorm/packs/my_echo_action/actions/logs.txt", "rb") as f:
-            print(hashlib.md5(f.read()).hexdigest())
+            h3 = hashlib.md5(f.read()).hexdigest()
+        if h1 == h2:
+            print("h1 y h2 iguales\n")
+        if h1 == h3:
+            print("h1 y h3 iguales\n")
+        if h2 == h3:
+            print("h2 y h3 iguales\n")
         return (True, message)
