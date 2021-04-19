@@ -16,7 +16,7 @@ class MyEchoAction(Action):
             hash2 = md5.new()
             hash2.update("/opt/stackstorm/packs/my_echo_action/actions/logs.txt")
             hash2.digest() # this generates the checksum
-            time.sleep(10)
+            #time.sleep(10)
             if filecmp.cmp(hash1, hash2):
                 with open("/opt/stackstorm/packs/my_echo_action/actions/logs.txt", "a") as f:
                     f.write("True" + "\n")
