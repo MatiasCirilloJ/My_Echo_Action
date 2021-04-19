@@ -28,10 +28,4 @@ class MyEchoAction(Action):
             print("h1 y h3 iguales\n")
         if h2 == h3:
             print("h2 y h3 iguales\n")
-            
-        h4 = hashlib.md5(message).hexdigest()
-        time.sleep(10)
-        h5 = hashlib.md5(message).hexdigest()
-        if h4 == h5:
-            print("no cambia el mensaje")
         return (True, message)
