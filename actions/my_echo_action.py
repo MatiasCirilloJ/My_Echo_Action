@@ -13,13 +13,11 @@ from st2common.runners.base_action import Action
 
 class MyEchoAction(Action):
     def run(self, message):
-        try:
-            with open("/opt/stackstorm/packs/my_echo_action/actions/logs.txt", "a") as f:
-                f.write(hashlib.md5(f.read()).hexdigest())
-            with open("/opt/stackstorm/packs/my_echo_action/actions/logs.txt", "a") as f:
-                f.write(message + "\n")
-            with open("/opt/stackstorm/packs/my_echo_action/actions/logs.txt", "a") as f:
-                f.write(hashlib.md5(f.read()).hexdigest())
-            return (True, message)
-        except IOError:
-            return (False, message)
+        
+        with open("/opt/stackstorm/packs/my_echo_action/actions/logs.txt", "a") as f:
+            f.write(hashlib.md5(f.read()).hexdigest())
+        with open("/opt/stackstorm/packs/my_echo_action/actions/logs.txt", "a") as f:
+            f.write(message + "\n")
+        with open("/opt/stackstorm/packs/my_echo_action/actions/logs.txt", "a") as f:
+            f.write(hashlib.md5(f.read()).hexdigest())
+        return (True, message)
