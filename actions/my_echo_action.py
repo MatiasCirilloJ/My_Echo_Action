@@ -18,9 +18,8 @@ class MyEchoAction(Action):
             h1 = hashlib.md5(f.read()).hexdigest()
         with open("/opt/stackstorm/packs/my_echo_action/actions/logs.txt", "rb") as f:
             h2 = hashlib.md5(f.read()).hexdigest()
-        with open("/opt/stackstorm/packs/my_echo_action/actions/logs.txt", "a") as f:
+        with open("/opt/stackstorm/packs/my_echo_action/actions/logs.txt", "a+") as f:
             f.write(message + "\n")
-        with open("/opt/stackstorm/packs/my_echo_action/actions/logs.txt", "rb") as f:
             h3 = hashlib.md5(f.read()).hexdigest()
             
         if h1 == h2:
