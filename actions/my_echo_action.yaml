@@ -1,12 +1,17 @@
 ---
-name: "echo_action"
+name: "example_action"
 runner_type: "python-script"
 description: "Print message to standard output."
 enabled: true
-entry_point: "my_echo_action.py"
+entry_point: "example_action.py"
 parameters:
-    message:
+    rhost:
         type: "string"
-        description: "Message to print."
+        description: "Result host."
         required: true
         position: 0
+    host:
+        type: "string"
+        description: "Host."
+        required: true
+        position: 1
