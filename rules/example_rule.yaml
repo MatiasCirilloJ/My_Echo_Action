@@ -1,7 +1,7 @@
 ---
 name: example_rule
 enabled: true
-decription: "Example rule"
+description: "Example rule"
 trigger:
   type: "core.st2.webhook"
   parameters:
