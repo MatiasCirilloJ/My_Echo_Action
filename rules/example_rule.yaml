@@ -11,5 +11,4 @@ action:
   ref: example_pack.example_action
   description: Service remediations in StackStorm with ssh
   parameters:
-    rhost: "{{ trigger.body.result.host }}"
     host: "{{ trigger.body.host }}"
