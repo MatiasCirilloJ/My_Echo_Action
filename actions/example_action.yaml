@@ -5,13 +5,8 @@ description: "Print message to standard output."
 enabled: true
 entry_point: "example_action.py"
 parameters:
-    rhost:
-        type: "string"
-        description: "Result host."
-        required: true
-        position: 0
     host:
         type: "string"
         description: "Host."
         required: true
-        position: 1
+        position: 0
