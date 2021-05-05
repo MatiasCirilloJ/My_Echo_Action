@@ -4,7 +4,7 @@
             name: "c1"
             ref: "example_pack.example_action_1"
             parameters:
-                message: "{{ message }}"
+                host: "{{ host }}"
             on-success: "c2"
         -
             name: "c2"
