@@ -1,0 +1,12 @@
+---
+name: "example_action"
+runner_type: "action-chain"
+description: "Print message to standard output."
+enabled: true
+entry_point: "chains/example_chain.yaml"
+parameters:
+    host:
+        type: "string"
+        description: "Host."
+        required: true
+        position: 0
