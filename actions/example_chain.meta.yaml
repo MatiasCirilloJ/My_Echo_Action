@@ -1,5 +1,5 @@
 ---
-name: "example_action"
+name: "example_chain_meta"
 runner_type: "action-chain"
 description: "Print message to standard output."
 enabled: true
