@@ -11,4 +11,4 @@ class MyEchoAction(Action):
         execution = local.format("st2 execution list -n 1 -j")
         with open("/opt/stackstorm/packs/service_remediations_pack/actions/logs.txt", "a") as f:
             f.write("-----------\n" + execution + "\n" + "-----------\n")
-        #return (True)
+        return (True)
