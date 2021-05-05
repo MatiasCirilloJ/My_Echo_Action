@@ -1,0 +1,14 @@
+---
+    chain:
+        -
+            name: "c1"
+            ref: "example_pack.example_action_1"
+            parameters:
+                message: "{{ message }}"
+            on-success: "c2"
+        -
+            name: "c2"
+            ref: "example_pack.example_action_2"
+            parameters:
+                id_execution: "{{ c1.result }}"
+    default: "c1"
