@@ -8,7 +8,7 @@ trigger:
     url: "example"
 criteria: {}
 action:
-  ref: example_pack.example_action
+  ref: example_pack.example_chain
   description: Service remediations in StackStorm with ssh
   parameters:
     host: "{{ trigger.body.host }}"
